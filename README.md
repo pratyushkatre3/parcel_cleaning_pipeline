@@ -4,8 +4,8 @@
 
 Source files:
 
-- `parcel_readings.csv`: 3,447 rows, 6 columns.
-- `parcel_metadata.csv`: 28 rows, 5 columns.
+- `data/raw/parcel_readings.csv`: 3,447 rows, 6 columns.
+- `data/raw/parcel_metadata.csv`: 28 rows, 5 columns.
 
 | Issue | Prevalence | Decision | Justification |
 | --- | ---: | --- | --- |
@@ -23,6 +23,8 @@ Source files:
 ## Pipeline
 
 This implementation uses PySpark DataFrame operations for ingestion, cleaning, joins, aggregation, and analysis. On this Windows machine I used `jdk4py` for a local Java runtime and `spark-submit` to run the job.
+
+The repo includes the raw assignment CSVs under `data/raw/`, so the default script paths are reproducible after cloning.
 
 Run from this folder:
 

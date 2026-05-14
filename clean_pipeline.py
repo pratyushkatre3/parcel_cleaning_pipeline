@@ -22,8 +22,9 @@ from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql import functions as F
 
 
-READINGS_DEFAULT = Path(r"C:\Users\praty\Downloads\parcel_readings.csv")
-METADATA_DEFAULT = Path(r"C:\Users\praty\Downloads\parcel_metadata.csv")
+BASE_DIR = Path(__file__).resolve().parent
+READINGS_DEFAULT = BASE_DIR / "data" / "raw" / "parcel_readings.csv"
+METADATA_DEFAULT = BASE_DIR / "data" / "raw" / "parcel_metadata.csv"
 
 
 def create_spark() -> SparkSession:
